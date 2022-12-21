@@ -1,0 +1,174 @@
+:root {
+  --color-one: #e4fe68;
+  --color-two: #d4f33b;
+}
+
+.green {
+  color: green;
+  margin-right: 5px;
+}
+
+.red {
+  color: red;
+  margin-right: 5px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  background-color: var(--color-one);
+  text-align: center;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+header > p {
+  font-size: 35pt;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+header > div > div > p {
+  font-weight: bold;
+}
+
+header > button {
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  font-size: 12pt;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 200px;
+  padding: 10px;
+}
+
+main {
+  margin-top: 270px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12pt;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+li > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cost {
+  display: flex;
+  flex-direction: row;
+}
+
+span > i {
+  font-size: 9pt;
+  color: gray;
+  font-weight: normal;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 40px;
+  box-shadow: 0 5px 5px 0 #eee;
+}
+
+input {
+  width: 300px;
+  border: 2px solid #d3d3d3;
+  border-radius: 20px;
+  outline: none;
+  transition: all .3s;
+  font-size: 12pt;
+  padding: 15px;
+  margin: 5px 0;
+}
+
+input:focus {
+  border: 2px solid var(--color-one);
+}
+
+select {
+  width: 300px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  transition: all .3s;
+  font-size: 12pt;
+  padding: 15px;
+  margin: 5px 0;
+  border: 2px solid #d3d3d3;
+}
+
+select:focus {
+  border: 2px solid var(--color-one);
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-one);
+  font-weight: bold;
+}
+
+.btn:focus {
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--color-two);
+}
+
+.btn-close {
+  background: none;
+  font-weight: bold;
+}
+
+.btn-close:hover {
+  background-color: #eee;
+}

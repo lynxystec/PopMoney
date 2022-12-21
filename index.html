@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Money | Você no controle</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="shortcut icon" href="img/icon.webp" type="image/x-icon" />
+  </head>
+  <body>
+
+    <header>
+      <span>Saldo total</span>
+      <p id="balance"></p>
+      <div>
+        <div>
+          <span>Entradas</span>
+          <p id="entries"></p>
+        </div>
+        <div>
+          <span>Saídas</span>
+          <p id="spendings"></p>
+        </div>
+      </div>
+      <button id="btn-open">Adicionar Transação</button>
+    </header>
+
+    <main>
+      <ul id="extract"></ul>
+    </main>
+
+    <div class="modal" id="modal">
+      <form id="form">
+        <input type="text" id="desc" placeholder="Descrição" required autocomplete="off" />
+        <input type="text" id="cost" placeholder="Valor" required autocomplete="off" />
+        <select id="type">
+          <option value="select">Selecione um tipo</option>
+          <option value="entry">Entrada</option>
+          <option value="spent">Saída</option>
+        </select>
+        <input type="submit" value="Adicionar" class="btn" />
+        <input type="reset" value="Cancelar" class="btn btn-close" id="btn-close" />
+      </form>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#cost').mask('#.##0,00', {reverse: true})
+      })
+    </script>
+  </body>
+</html>
